@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+  <ion-toolbar color="primary">
+    <ion-title class="title"  >
+     Home Page
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,34 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">News and Weather App</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div  id="container" >
+    <strong>Welcome to my News and Weather App!</strong>
+    <br>
+    <strong>Please Choose one of the buttons</strong>
+    <br>
+    <br>
+    <ion-button size="medium" (click)="goToNews()" id="text-size"> ==> Click for the News headlines <== </ion-button>
+    <br>
+    <img src="https://videohive.img.customer.envatousercontent.com/files/243510458/Image_News_BG.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=f8fe14dbfd8df0554d0e6c8d1669a698"
+    height="180" width="320" (dblclick)=show()>
+    <br>
+    <br>
+    <ion-button size="medium" (click)="goToWeather()" id="text-size" > ==> Click for Weather <== </ion-button>
+    <br>
+    <img
+    src="https://image.freepik.com/free-photo/abstract-blurred-background-with-bokeh-from-light-car-rain_35018-318.jpg"
+    height="180" width="320" (dblclick)=show()>
+    <br>
+    <br>
+    <ion-button size="medium" (click)="goToGithub()" id="text-size"> ==> Click here for the project link <== </ion-button>
+    <br>
+    <img
+          src="https://miro.medium.com/max/1200/1*wzEf4qVNT7mUeMIeQWTJbg.jpeg"
+          height="180" width="320" (dblclick)=show()>
+    
   </div>
 </ion-content>

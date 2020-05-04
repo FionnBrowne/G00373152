@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="title">Irish News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="cardcolor">
+    <ion-button expand="block" margin="10px" size="small" (click)="goHome()" id="text-size" > Home</ion-button>
+  </ion-card>
+  
+
+  <ion-card class="cardcolor" *ngFor="let story of IrishNewsStories">
+    <br>
+    
+   <ion-card-header>
+     <ion-card-title class="text-title">
+       {{story.title}}
+     </ion-card-title>
+     <ion-card-subtitle class="text-author">
+       Author: {{story.author}} 
+     </ion-card-subtitle>
+   </ion-card-header>
+   <ion-card-content >
+     <p class="text-body"> {{story.content}}</p> 
+     <img height=150 width=200 src="{{story.urlToImage}}">
+   </ion-card-content>
+ </ion-card>
+
+  <ion-card class="cardcolor">
+   <ion-button expand="block" margin="20px" size="small" (click)="goHome()"  id="text-size"> Home</ion-button>
+  </ion-card>
+
+</ion-content>

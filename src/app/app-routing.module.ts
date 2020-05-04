@@ -11,7 +11,25 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
-];
+  {
+    path: 'news',
+    loadChildren: () => import('./news/news.module').then( m => m.NewsPageModule)
+  },
+  {
+    path: 'weather',
+    loadChildren: () => import('./weather/weather.module').then( m => m.WeatherPageModule)
+  },
+  {
+    path: 'weather',
+    loadChildren: () => import('./weather/weather.module').then( m => m.WeatherPageModule)
+  },
+  {
+    path: 'github',
+    loadChildren: () => import('./github/github.module').then( m => m.GithubPageModule)
+  },
+
+]
+ 
 
 @NgModule({
   imports: [
@@ -20,3 +38,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
